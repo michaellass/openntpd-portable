@@ -61,7 +61,7 @@ AM_CONDITIONAL([HAVE_CLOCK_GETTIME], [test "x$ac_cv_func_clock_gettime" = xyes])
 
 # check for libtls
 AC_SEARCH_LIBS([tls_config_set_ca_mem],[tls],
-	       [LIBS="$LIBS -ltls -lssl -lcrypto"],,[-lssl -lcrypto])
+	       [LIBS="$LIBS -ltls"])
 AC_CHECK_FUNCS([tls_config_set_ca_mem])
 
 # check if libtls uses 3-argument tls_write
